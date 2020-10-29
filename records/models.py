@@ -57,9 +57,10 @@ class ChemicalProducts(models.Model):
     quantity = models.CharField(max_length=100, verbose_name='Cantidad por producto')
     components = models.CharField(max_length=100, verbose_name='Componentes')
     dateElaboration = models.CharField(max_length=100, verbose_name='Fecha de elaboraciónn')
+    dateElaboration = models.CharField(max_length=100, verbose_name='Fecha de caducidad')
 
     def __str__(self):
-        return self.brand
+        return self.brand 
 
     class Meta:
         verbose_name = 'Producto químico'
