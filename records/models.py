@@ -17,6 +17,7 @@ class Employee(models.Model):
         verbose_name_plural= 'Trabajadores'
 
 class LemonBoxes(models.Model):
+        name = models.CharField(max_length=50, verbose_name='NOMBRE DEL TRABAJADOR')
         greenLemonMonday = models.CharField(max_length=20, verbose_name='Lunes cantidad de limón verde')
         stainedLemonMonday = models.CharField(max_length=20, verbose_name='Cantidad de limón manchado')
         greenLemonTuesday = models.CharField(max_length=20, verbose_name='Martes cantidad de limón verde')
@@ -31,11 +32,11 @@ class LemonBoxes(models.Model):
         stainedLemonSaturday = models.CharField(max_length=20, verbose_name='Cantidad de limón manchado')
 
         def __str__(self):
-            return self.greenLemonMonday
+            return self.name
 
         class Meta:
-            verbose_name = 'Cantidad entregada de cajas de limón (Día)'
-            verbose_name_plural = 'Cantidad entregada de cajas de limón (Día)'
+            verbose_name = 'Entrega de carga'
+            verbose_name_plural = 'Entrega de cajas'
 
 class Tool(models.Model):
         use = models.CharField(max_length=100, verbose_name='Uso')
